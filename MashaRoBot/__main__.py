@@ -82,7 +82,7 @@ I'm here to help you manage your groups! Hit *Help ❕* button below to find out
 buttons = [
     [
         InlineKeyboardButton(text="Help ❕", callback_data="help_back"),
-        InlineKeyboardButton(text="Dev 👨‍💻", url="url="https://t.me/sanithbimsara"),
+        InlineKeyboardButton(text="Dev 👨‍💻", url="https://t.me/sanithbimsara"),
 "),
     ],
     [
@@ -90,7 +90,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            InlineKeyboardButton(text="Other Projects 📋", url="url="https://t.me/otherprojects"),
+            InlineKeyboardButton(text="Other Projects 📋", url="https://t.me/otherprojects"),
             InlineKeyboardButton(text="Share 🔁", url="https://t.me/share/url?url=A%20powerful%20Group%20Manager%20Bot%2C%0A%0AMeet%20the%20best%20group%20manager%20for%20telegram%20groups%20%E2%9E%A0%20%40TheTinkerBellbot%0A%0AShare%20and%20support%20us"),
         ),
     ],
