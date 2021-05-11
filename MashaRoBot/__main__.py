@@ -83,7 +83,6 @@ buttons = [
     [
         InlineKeyboardButton(text="Help ❕", callback_data="help_back"),
         InlineKeyboardButton(text="Dev 👨‍💻", url="https://t.me/sanithbimsara"),
-"),
     ],
     [
         InlineKeyboardButton(text="➕️ Add Me On Your Group ➕", url="t.me/TheTinkerBellbot?startgroup=true"),
