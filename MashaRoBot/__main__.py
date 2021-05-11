@@ -74,24 +74,26 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello! I am *Senku*.
-I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+Hello! I am *Tinker Bell*.
+
+I'm here to help you manage your groups! Hit *Help ❕* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
 """
 
 buttons = [
     [
-        InlineKeyboardButton(
-            text="➕️ Add Me 🔘", url="t.me/SenkuRoBot?startgroup=true"),
-    ],
-    [
-        InlineKeyboardButton(text="ℹ️ About", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 Commands", callback_data="help_back"),
+        InlineKeyboardButton(text="Help ❕", callback_data="help_back"),
+        InlineKeyboardButton(text="Dev 👨‍💻", url="url="https://t.me/sanithbimsara"),
+"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 Source", callback_data="source_"),
+            text="➕️ Add Me On Your Group ➕", url="t.me/TheTinkerBellbot?startgroup=true"),
+    ],
+    [
         InlineKeyboardButton(
-            text="🔔 News", url="https://t.me/SenkuNews"
+            InlineKeyboardButton(text="Other Projects 📋", url="url="https://t.me/otherprojects"),
+        InlineKeyboardButton(
+            text="Share 🔁", url="https://t.me/share/url?url=A%20powerful%20Group%20Manager%20Bot%2C%0A%0AMeet%20the%20best%20group%20manager%20for%20telegram%20groups%20%E2%9E%A0%20%40TheTinkerBellbot%0A%0AShare%20and%20support%20us"
         ),
     ],
 ]
@@ -100,9 +102,9 @@ buttons = [
 HELP_STRINGS = """
 *『HELP BUTTONS HERE』 *
 
-• `/help`*:* PM's you this message[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
- • `/help` `<module name>`*:* PM's you info about that module.
- • `/settings`*:*
+• `/help`*:* PM's you this message[.]( https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
+• `/help` `<module name>`*:* PM's you info about that module.
+• `/settings`*:*
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
 """
