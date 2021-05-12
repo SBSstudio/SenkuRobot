@@ -75,7 +75,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hello! I am *Senku*.
-I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
 """
 
 buttons = [
@@ -100,7 +100,7 @@ buttons = [
 HELP_STRINGS = """
 *『HELP BUTTONS HERE』 *
 
-• `/help`*:* PM's you this message[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+• `/help`*:* PM's you this message[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
  • `/help` `<module name>`*:* PM's you info about that module.
  • `/settings`*:*
    • in PM: will send you your settings for all supported modules.
