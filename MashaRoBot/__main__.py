@@ -1,3 +1,35 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@sanith2005 
+sanith2005
+/
+SenkuRobot
+forked from Mr-Dark-Prince/MashaRoBot
+0
+0
+129
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+SenkuRobot/MashaRoBot/__main__.py /
+@FtSasaki
+FtSasaki Update __main__.py
+Latest commit b524e7b 25 days ago
+ History
+ 2 contributors
+752 lines (646 sloc)  25 KB
+  
 import importlib
 import time
 import re
@@ -74,23 +106,24 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello! I am *Tinker Bell*.
-
-I'm here to help you manage your groups! Hit *Help ❕* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+Hello! I am *Senku*.
+I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="Help ❕", callback_data="help_back"),
-        InlineKeyboardButton(text="Dev 👨‍💻", url="https://t.me/sanithbimsara"),
+        InlineKeyboardButton(
+            text="➕️ Add Me 🔘", url="t.me/SenkuRoBot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="➕️ Add Me On Your Group ➕", url="t.me/TheTinkerBellbot?startgroup=true"),
+        InlineKeyboardButton(text="ℹ️ About", callback_data="masha_"),
+        InlineKeyboardButton(text="📚 Commands", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            InlineKeyboardButton(text="Other Projects 📋", url="https://t.me/otherprojects"),
-            InlineKeyboardButton(text="Share 🔁", url="https://t.me/share/url?url=A%20powerful%20Group%20Manager%20Bot%2C%0A%0AMeet%20the%20best%20group%20manager%20for%20telegram%20groups%20%E2%9E%A0%20%40TheTinkerBellbot%0A%0AShare%20and%20support%20us"),
+            text="💾 Source", callback_data="source_"),
+        InlineKeyboardButton(
+            text="🔔 News", url="https://t.me/SenkuNews"
         ),
     ],
 ]
@@ -98,10 +131,9 @@ buttons = [
 
 HELP_STRINGS = """
 *『HELP BUTTONS HERE』 *
-
-• `/help`*:* PM's you this message[.]( https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
-• `/help` `<module name>`*:* PM's you info about that module.
-• `/settings`*:*
+• `/help`*:* PM's you this message[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+ • `/help` `<module name>`*:* PM's you info about that module.
+ • `/settings`*:*
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
 """
@@ -353,18 +385,14 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     if query.data == "masha_":
         query.message.edit_text(
             text="""⚡️ I'm *Senku*, a powerful group management bot built to help you manage your group easily.
-
 • I can restrict users.
 • I can greet users with customizable welcome messages and even set a group's rules.
 • I have an advanced anti-flood system.
 • I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
 • I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
 • I check for admins' permissions before executing any command and more stuffs.
-
 _Senku's licensed under the GNU General Public License v3.0_
-
 Here is the [💾 Repository](https://github.com/FtSasaki/SenkuRobot).
-
 If you have any question about Senku, let us know at @SenkuSupport.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -749,3 +777,16 @@ if __name__ == "__main__":
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
