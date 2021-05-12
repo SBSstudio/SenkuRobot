@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@sanith2005 
-sanith2005
-/
-SenkuRobot
-forked from Mr-Dark-Prince/MashaRoBot
-0
-0
-129
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-SenkuRobot/MashaRoBot/__main__.py /
-@FtSasaki
-FtSasaki Update __main__.py
-Latest commit b524e7b 25 days ago
- History
- 2 contributors
-752 lines (646 sloc)  25 KB
-  
 import importlib
 import time
 import re
@@ -131,6 +99,7 @@ buttons = [
 
 HELP_STRINGS = """
 *『HELP BUTTONS HERE』 *
+
 • `/help`*:* PM's you this message[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
  • `/help` `<module name>`*:* PM's you info about that module.
  • `/settings`*:*
@@ -385,14 +354,18 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     if query.data == "masha_":
         query.message.edit_text(
             text="""⚡️ I'm *Senku*, a powerful group management bot built to help you manage your group easily.
+
 • I can restrict users.
 • I can greet users with customizable welcome messages and even set a group's rules.
 • I have an advanced anti-flood system.
 • I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
 • I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
 • I check for admins' permissions before executing any command and more stuffs.
+
 _Senku's licensed under the GNU General Public License v3.0_
+
 Here is the [💾 Repository](https://github.com/FtSasaki/SenkuRobot).
+
 If you have any question about Senku, let us know at @SenkuSupport.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -777,16 +750,3 @@ if __name__ == "__main__":
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
