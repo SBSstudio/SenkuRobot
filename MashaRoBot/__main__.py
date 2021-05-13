@@ -91,7 +91,7 @@ buttons = [
         InlineKeyboardButton(
             text="💾 Source", callback_data="source_"),
         InlineKeyboardButton(
-            text="🔔 News", url="https://t.me/SenkuNews"
+            text="🔔 News", url="https://t.me/otherprojects"
         ),
     ],
 ]
@@ -353,7 +353,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text="""⚡️ I'm *Senku*, a powerful group management bot built to help you manage your group easily.
+            text="""⚡️ I'm *Tinker Bell*, a powerful group management bot built to help you manage your group easily.
 
 • I can restrict users.
 • I can greet users with customizable welcome messages and even set a group's rules.
@@ -362,16 +362,14 @@ def Masha_about_callback(update: Update, context: CallbackContext):
 • I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
 • I check for admins' permissions before executing any command and more stuffs.
 
-_Senku's licensed under the GNU General Public License v3.0_
-
-Here is the [💾 Repository](https://github.com/FtSasaki/SenkuRobot).
-
-If you have any question about Senku, let us know at @SenkuSupport.""",
+If you have any question about Senku, let us know at @otherprojects.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
+                 [  
+                    InlineKeyboardButton(text="Back", callback_data="masha_back")
+               ],[
                     InlineKeyboardButton(text="Back", callback_data="masha_back")
                  ]
                 ]
