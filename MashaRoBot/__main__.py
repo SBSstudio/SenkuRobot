@@ -74,35 +74,36 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello! I am *Senku*.
-I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
+Hello! I am *Tinker Bell*.
+
+I'm here to help you manage your groups! Hit *Help ❗* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ Add Me 🔘", url="t.me/SenkuRoBot?startgroup=true"),
+            text="➕️ Add Me to your group ➕", url="t.me/SenkuRoBot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ℹ️ About", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 Commands", callback_data="help_back"),
+        InlineKeyboardButton(text="Help ❗", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 Source", callback_data="source_"),
+            text="Dev 🎭", url="https://,t.me/sanithbimsara"),
         InlineKeyboardButton(
-            text="🔔 News", url="https://t.me/SenkuNews"
+            text="🔔 News", url="https://t.me/otherprojects"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-*『HELP BUTTONS HERE』 *
+*Tinker Bell Help ❗*
 
 • `/help`*:* PM's you this message[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
- • `/help` `<module name>`*:* PM's you info about that module.
- • `/settings`*:*
+• `/help` `<module name>`*:* PM's you info about that module.
+• `/settings`*:*
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
 """
@@ -193,7 +194,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="🏃 BACK", callback_data="help_back")]]
                     ),
                 )
 
@@ -307,7 +308,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="「 GO BACK 」", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="🏃 BACK", callback_data="help_back")]]
                 ),
             )
 
@@ -353,7 +354,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text="""⚡️ I'm *Senku*, a powerful group management bot built to help you manage your group easily.
+            text="""⚡️ I'm *Tinker Bell*, a powerful group management bot built to help you manage your group easily.
 
 • I can restrict users.
 • I can greet users with customizable welcome messages and even set a group's rules.
@@ -372,7 +373,7 @@ If you have any question about Senku, let us know at @SenkuSupport.""",
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="masha_back")
+                    InlineKeyboardButton(text="🏃 Back", callback_data="masha_back")
                  ]
                 ]
             ),
@@ -392,14 +393,16 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hey there! I'm *SenkuRobot*
+            text=""" Hey there! I'm *Tinker Bel
+
+*
                  \nHere is the 💾 [Source Code](https://github.com/FtSasaki/SenkuRobot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="source_back")
+                    InlineKeyboardButton(text="🏃 Back", callback_data="source_back")
                  ]
                 ]
             ),
@@ -465,7 +468,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="🏃 Back", callback_data="help_back")]]
             ),
         )
 
@@ -538,7 +541,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Back",
+                                text="🏃 Back",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
