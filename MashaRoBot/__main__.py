@@ -76,23 +76,23 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 Hello! I am *Tinker Bell*.
 
-I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
+I'm here to help you manage your groups! Hit *❕ Help* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ Add Me to your group ➕️", url="t.me/SenkuRoBot?startgroup=true"),
+            text="➕️ Add Me to your group ➕️", url="t.me/TheTinkerBellbot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ℹ️ About", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 Commands", callback_data="help_back"),
+        InlineKeyboardButton(text="❕ Help", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 Source", callback_data="source_"),
+            text="Tinker Bell", callback_data="source_"),
         InlineKeyboardButton(
-            text="🔔 News", url="https://t.me/otherprojects"
+            text="🔔 News", url="https://t.me/jdkprojects"
         ),
     ],
 ]
@@ -363,17 +363,13 @@ def Masha_about_callback(update: Update, context: CallbackContext):
 • I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
 • I check for admins' permissions before executing any command and more stuffs.
 
-If you have any question about Senku, let us know at @otherprojects.""",
+If you have any question about *Tinker Bell*, let us know at @jdkprojects.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [  
-                    InlineKeyboardButton(
-                        text="🔔 owner", url="https://t.me/sanithbimsara")
-                    InlineKeyboardButton(
-                        text="🔔 News", url="https://t.me/otherprojects")
-               ],[
+                    InlineKeyboardButton(text="Tinker Bell", callback_data="source_")
                     InlineKeyboardButton(text="Back", callback_data="masha_back")
                  ]
                 ]
@@ -394,8 +390,18 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hey there! I'm *SenkuRobot*
-                 \nHere is the 💾 [Source Code](https://github.com/FtSasaki/SenkuRobot) .""",
+            text=""" Hey there! I'm *Tinker Bell*
+
+○ My Name : [Tinker Bell](https://t.me/TheTinkerBellbot)
+○ Creator : Sanith Bimsara (https://t.me/sanithbimsara)
+○ Language : Python3
+○ Library : Pyrogram asyncio 0.16.1 (https://docs.pyrogram.org/)
+○ Server : [Heroku](https://heroku.com]
+○ Build Status : V2 [+0.4
+○ News : [JDK Projects](https://t.me/jdkprojects)
+
+I Was Made By [Sanith Bimsara](https://t.me/sanithbimsara)""",
+            
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
