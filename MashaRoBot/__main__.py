@@ -369,7 +369,6 @@ If you have any question about *Tinker Bell*, let us know at @jdkprojects.""",
             reply_markup=InlineKeyboardMarkup(
                 [
                  [  
-                    InlineKeyboardButton(text="Tinker Bell", callback_data="source_")
                     InlineKeyboardButton(text="Back", callback_data="masha_back")
                  ]
                 ]
