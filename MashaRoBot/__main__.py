@@ -392,9 +392,9 @@ def Source_about_callback(update: Update, context: CallbackContext):
             text=""" Hey there! I'm *Tinker Bell*
 
 ○ My Name : [Tinker Bell](https://t.me/TheTinkerBellbot)
-○ Creator : Sanith Bimsara (https://t.me/sanithbimsara)
+○ Creator : [Sanith Bimsara](https://t.me/sanithbimsara)
 ○ Language : Python3
-○ Library : Pyrogram asyncio 0.16.1 (https://docs.pyrogram.org/)
+○ Library : [Pyrogram asyncio 0.16.1](https://docs.pyrogram.org/)
 ○ Server : [Heroku](https://heroku.com]
 ○ Build Status : V2 [+0.4
 ○ News : [JDK Projects](https://t.me/jdkprojects)
