@@ -74,7 +74,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello! I am *Senku*.
+Hello! I am *Tinker Bell*.
+
 I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/e3441cb48dacac79771b4.jpg)
 """
 
@@ -368,7 +369,10 @@ If you have any question about Senku, let us know at @otherprojects.""",
             reply_markup=InlineKeyboardMarkup(
                 [
                  [  
-                    InlineKeyboardButton(text="Back", callback_data="masha_back")
+                    InlineKeyboardButton(
+                        text="🔔 owner", url="https://t.me/sanithbimsara")
+                    InlineKeyboardButton(
+                        text="🔔 News", url="https://t.me/otherprojects")
                ],[
                     InlineKeyboardButton(text="Back", callback_data="masha_back")
                  ]
