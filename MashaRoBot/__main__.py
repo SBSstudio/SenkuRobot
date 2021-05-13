@@ -90,7 +90,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🧚n Tinker Bell", callback_data="source_"),
+            text="🧚 Tinker Bell", callback_data="source_"),
         InlineKeyboardButton(
             text="🔔 News", url="https://t.me/jdkprojects"
         ),
